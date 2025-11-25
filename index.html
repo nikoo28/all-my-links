@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://cdn.counter.dev/script.js" data-id="e795fe38-0106-4850-9cd4-2119cae8db2b" data-utcoffset="-7"></script>
+    <script src="https://cdn.counter.dev/script.js" data-id="e795fe38-0106-4850-9cd4-2119cae8db2b"
+        data-utcoffset="-7"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All My Links | Programming & Interview Prep</title>
@@ -11,7 +13,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
@@ -19,19 +21,19 @@
             padding: 20px;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 680px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+
         .profile {
             text-align: center;
             margin-bottom: 40px;
             animation: fadeIn 0.6s ease-in;
         }
-        
+
         .profile-image {
             width: 120px;
             height: 120px;
@@ -41,34 +43,40 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 4px solid white;
         }
-        
+
         .profile-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .profile h1 {
             color: white;
             font-size: 2em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
-        
+
         .profile p {
             color: rgba(255, 255, 255, 0.9);
             font-size: 1.1em;
             max-width: 500px;
             margin: 0 auto;
         }
-        
+
         .links {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 16px;
             margin-bottom: 30px;
         }
-        
+
+        @media (max-width: 600px) {
+            .links {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .link-card {
             background: white;
             border-radius: 12px;
@@ -82,41 +90,58 @@
             transition: all 0.3s ease;
             animation: slideUp 0.5s ease-out backwards;
         }
-        
-        .link-card:nth-child(1) { animation-delay: 0.1s; }
-        .link-card:nth-child(2) { animation-delay: 0.2s; }
-        .link-card:nth-child(3) { animation-delay: 0.3s; }
-        .link-card:nth-child(4) { animation-delay: 0.4s; }
-        .link-card:nth-child(5) { animation-delay: 0.5s; }
-        .link-card:nth-child(6) { animation-delay: 0.6s; }
-        
+
+        .link-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .link-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .link-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .link-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .link-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .link-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
         .link-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
         }
-        
+
         .link-icon {
             font-size: 32px;
             flex-shrink: 0;
         }
-        
+
         .link-content {
             flex: 1;
         }
-        
+
         .link-title {
             font-weight: 600;
             font-size: 1.05em;
             margin-bottom: 4px;
         }
-        
+
         .link-description {
             font-size: 0.9em;
             opacity: 0.8;
         }
-        
+
         .support-section {
             text-align: center;
             margin-top: 50px;
@@ -124,14 +149,14 @@
             border-top: 2px solid rgba(255, 255, 255, 0.3);
             animation: fadeIn 1s ease-in;
         }
-        
+
         .support-text {
             color: white;
             font-size: 1.1em;
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
-        
+
         .coffee-button {
             display: inline-flex;
             align-items: center;
@@ -146,63 +171,65 @@
             box-shadow: 0 6px 20px rgba(255, 221, 0, 0.4);
             transition: all 0.3s ease;
         }
-        
+
         .coffee-button:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(255, 221, 0, 0.6);
             background: #FFE54C;
         }
-        
+
         .coffee-icon {
             font-size: 24px;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* Responsive Design */
         @media (max-width: 600px) {
             .profile h1 {
                 font-size: 1.5em;
             }
-            
+
             .profile p {
                 font-size: 1em;
             }
-            
+
             .link-card {
                 padding: 16px 18px;
             }
-            
+
             .link-icon {
                 font-size: 28px;
             }
-            
+
             .link-title {
                 font-size: 0.95em;
             }
-            
+
             .link-description {
                 font-size: 0.85em;
             }
-            
+
             .coffee-button {
                 padding: 14px 28px;
                 font-size: 1em;
@@ -210,43 +237,56 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Profile Section -->
         <div class="profile">
             <div class="profile-image">
-                <img src="https://yt3.googleusercontent.com/Onk0pKlvF-v0DLwanvH0zyw_4XcQJ7BQUCcAKCnZ46oxP_peMAJt0XKG9ns6loBWLknjjMJBmw=s900-c-k-c0x00ffffff-no-rj" alt="Nikhil Lohia">
+                <img src="https://yt3.googleusercontent.com/Onk0pKlvF-v0DLwanvH0zyw_4XcQJ7BQUCcAKCnZ46oxP_peMAJt0XKG9ns6loBWLknjjMJBmw=s900-c-k-c0x00ffffff-no-rj"
+                    alt="Nikhil Lohia">
             </div>
             <h1>Nikhil Lohia</h1>
             <p>problem solving | how-to | tips</p>
         </div>
-        
+
         <!-- Links Section -->
         <div class="links">
             <a href="https://topmate.io/nikoo28/1672249" class="link-card" target="_blank" rel="noopener">
                 <div class="link-icon">🧭</div>
                 <div class="link-content">
                     <div class="link-title">Get the LeetCode Navigator</div>
-                    <div class="link-description">Save 100+ hours of organization by solving problems in the RIGHT order!</div>
+                    <div class="link-description">Save 100+ hours of organization by solving problems in the RIGHT
+                        order!</div>
                 </div>
             </a>
-            
+
             <a href="https://topmate.io/nikoo28/1744544" class="link-card" target="_blank" rel="noopener">
                 <div class="link-icon">🏢</div>
                 <div class="link-content">
                     <div class="link-title">Tech Giants Decoded</div>
-                    <div class="link-description">Uncover, extract, and target YOUR dream company. 3000+ questions filtered by companies!</div>
+                    <div class="link-description">Uncover, extract, and target YOUR dream company. 3000+ questions
+                        filtered by companies!</div>
                 </div>
             </a>
-            
+
+            <a href="https://topmate.io/nikoo28/1822843" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon">🗂️</div>
+                <div class="link-content">
+                    <div class="link-title">Get the system design flashcards</div>
+                    <div class="link-description">Master system design concepts with these flashcards.</div>
+                </div>
+            </a>
+
             <a href="https://topmate.io/nikoo28/1398815" class="link-card" target="_blank" rel="noopener">
                 <div class="link-icon">🤝</div>
                 <div class="link-content">
                     <div class="link-title">Schedule a 1:1 Session with Me</div>
-                    <div class="link-description">Let's discuss anything - career advice, interview prep, or technical questions</div>
+                    <div class="link-description">Let's discuss anything - career advice, interview prep, or technical
+                        questions</div>
                 </div>
             </a>
-            
+
             <a href="https://topmate.io/nikoo28" class="link-card" target="_blank" rel="noopener">
                 <div class="link-icon">📄</div>
                 <div class="link-content">
@@ -254,16 +294,18 @@
                     <div class="link-description">Quickly fix problems to get better interview calls</div>
                 </div>
             </a>
-            
+
             <a href="https://topmate.io/nikoo28" class="link-card" target="_blank" rel="noopener">
                 <div class="link-icon">🎯</div>
                 <div class="link-content">
                     <div class="link-title">Mock Interview Experience</div>
-                    <div class="link-description">Get the experience of a real interview call to tackle last-day nervousness</div>
+                    <div class="link-description">Get the experience of a real interview call to tackle last-day
+                        nervousness</div>
                 </div>
             </a>
-            
-            <a href="https://www.youtube.com/channel/UCT-S2ngqEBoYCM5UKuNeELg/join" class="link-card" target="_blank" rel="noopener">
+
+            <a href="https://www.youtube.com/channel/UCT-S2ngqEBoYCM5UKuNeELg/join" class="link-card" target="_blank"
+                rel="noopener">
                 <div class="link-icon">🎬</div>
                 <div class="link-content">
                     <div class="link-title">Join YouTube Channel Membership</div>
@@ -271,7 +313,7 @@
                 </div>
             </a>
         </div>
-        
+
         <!-- Support Section -->
         <div class="support-section">
             <p class="support-text">If you love this content, you can show your support ❤️</p>
@@ -282,4 +324,5 @@
         </div>
     </div>
 </body>
+
 </html>
