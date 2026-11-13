@@ -133,6 +133,19 @@
             flex-shrink: 0;
         }
 
+        .link-icon img {
+            display: block;
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Bytesnack fills the last row's empty corner in three columns; in two it spans the row, so no gap opens */
+        @media (max-width: 900px) and (min-width: 601px) {
+            .bytesnack-card {
+                grid-column: span 2;
+            }
+        }
+
         .link-content {
             flex: 1;
         }
@@ -375,6 +388,14 @@
                 <div class="link-content">
                     <div class="link-title">Join YouTube Channel Membership</div>
                     <div class="link-description">Get exclusive perks and support the channel!</div>
+                </div>
+            </a>
+
+            <a href="https://bytesnack.dev/" class="link-card bytesnack-card" target="_blank" rel="noopener">
+                <div class="link-icon"><img src="https://bytesnack.dev/favicon.svg" alt="" width="32" height="32"></div>
+                <div class="link-content">
+                    <div class="link-title">Bytesnack: AI-Assisted Interviews [NEW]</div>
+                    <div class="link-description">AI writes the code now. You're judged on everything else.</div>
                 </div>
             </a>
         </div>
